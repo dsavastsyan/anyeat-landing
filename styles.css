@@ -424,3 +424,9 @@ fieldset legend span, .waitlist__form small { color: var(--ink); font-weight: 40
   .site-footer p { text-align: left; }
   .site-footer__copy { width: 100%; }
 }
+
+/* Arrow icon (inline SVG, never rendered as emoji) */
+.arrow { flex: none; width: .85em; height: .85em; margin-left: 6px; vertical-align: -.08em; }
+.button .arrow, .announce__go .arrow, .site-footer a .arrow { display: inline-block; }
+.button--primary span, .button--primary .arrow { margin-left: 8px; }
+.button--small .arrow { margin-left: 5px; }

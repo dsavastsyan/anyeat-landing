@@ -3,11 +3,199 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex, nofollow">
-    <title>AnyEat</title>
+    <meta name="robots" content="noindex">
+    <meta name="description" content="AnyEat — приложение, которое помогает выбирать еду в ресторанах осознанно.">
+    <title>AnyEat — ешь вкусно, выбирай осознанно</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1>AnyEat</h1>
-    <p>Скоро</p>
+    <a class="announce" href="https://restaurantsecret.ru">
+      <span class="announce__dot" aria-hidden="true"></span>
+      <span><strong>Можно попробовать бесплатно уже сейчас:</strong> меню ресторанов с КБЖУ в RestaurantSecret</span>
+      <span class="announce__go">Открыть <span aria-hidden="true">↗</span></span>
+    </a>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="AnyEat, на главную">
+        <img class="wordmark__mark" src="assets/logo-mark.svg" alt="" aria-hidden="true">
+        <img class="wordmark__text" src="assets/wordmark.svg" alt="AnyEat" width="312" height="108">
+      </a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a href="#try-now">Попробуй сейчас</a>
+        <a href="#how-it-works">Как работает</a>
+      </nav>
+      <a class="button button--small button--outline" href="https://restaurantsecret.ru">RestaurantSecret <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell" aria-labelledby="hero-title">
+        <div class="hero__copy">
+          <h1 id="hero-title">Ешь вкусно.<br><span>Выбирай осознанно.</span></h1>
+          <p class="hero__lead">Смотри КБЖУ ресторанных блюд, выбирай без неловкости и оставайся верен своим целям — даже когда жизнь происходит в городе.</p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="https://restaurantsecret.ru">Попробовать сейчас <span aria-hidden="true">↗</span></a>
+            <a class="button button--outline" href="#waitlist">В список ожидания</a>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-label="Экраны AnyEat: меню ресторана и дневник питания">
+          <div class="hero__sun" aria-hidden="true"></div>
+          <div class="hero__line hero__line--one" aria-hidden="true"></div>
+          <figure class="device device--menu">
+            <img src="assets/real/menu.jpg" alt="Экран с меню ресторана и КБЖУ блюд" width="1206" height="2622">
+          </figure>
+          <figure class="device device--diary">
+            <img src="assets/real/diary.jpg" alt="Экран дневника питания с калориями и макронутриентами" width="1206" height="2622">
+          </figure>
+          <span class="visual-note visual-note--top">выбор без догадок</span>
+          <span class="visual-note visual-note--bottom">полный обзор на твоё питание</span>
+        </div>
+      </section>
+
+      <section class="try-now section-shell" id="try-now" aria-labelledby="try-title">
+        <div class="try-now__copy">
+          <p class="eyebrow">Попробуй уже сейчас</p>
+          <h2 id="try-title">Начни с ресторанов,<br><em>которые уже открыты.</em></h2>
+          <p>RestaurantSecret помогает смотреть меню ресторанов Москвы с удобными фильтрами по составу и КБЖУ блюд.</p>
+          <a class="button button--light" href="https://restaurantsecret.ru">Открыть RestaurantSecret <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="waitlist section-shell" id="waitlist" aria-labelledby="waitlist-title">
+        <div>
+          <p class="eyebrow">Ранний доступ</p>
+          <h2 id="waitlist-title">Будь в числе первых.</h2>
+          <p>Оставь email — сообщим, когда AnyEat будет готов.</p>
+        </div>
+        <form class="waitlist__form" id="waitlist-form" novalidate>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          <fieldset>
+            <legend>Платформа <span>(необязательно)</span></legend>
+            <div class="choice-row">
+              <label class="choice"><input type="radio" name="platform" value="ios"><span>iOS</span></label>
+              <label class="choice"><input type="radio" name="platform" value="android"><span>Android</span></label>
+              <label class="choice"><input type="radio" name="platform" value="unknown"><span>Пока не знаю</span></label>
+            </div>
+          </fieldset>
+          <label class="consent"><input type="checkbox" name="consent" required><span>Даю согласие на <a href="https://restaurantsecret.ru/legal/pdn-consent.pdf" target="_blank" rel="noopener">обработку персональных данных</a> в целях отправки рекламных сообщений, в том числе сообщений о запуске AnyEat и других предложениях.</span></label>
+          <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="button button--solid" type="submit">Встать в список ожидания</button>
+          <p class="form-note">Обещаем писать только по важным поводам ♡</p>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="process section-shell" id="how-it-works" aria-labelledby="process-title">
+        <div class="section-heading">
+          <h2 id="process-title">Где бы<br><em>ты ни был</em></h2>
+        </div>
+        <div class="process__grid">
+          <article class="process-card">
+            <span class="process-card__number">01</span>
+            <h3>Дома</h3>
+            <p>Сканируй штрихкод и находи продукты, создавай рецепты и наборы, выбирай из недавнего и частого.</p>
+          </article>
+          <article class="process-card">
+            <span class="process-card__number">02</span>
+            <h3>В ресторане</h3>
+            <p>Найди любимое заведение: все КБЖУ меню с удобными фильтрами за секунды.</p>
+          </article>
+          <article class="process-card">
+            <span class="process-card__number">03</span>
+            <h3>Везде</h3>
+            <p>Веди дневник и достигай своих целей.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="screens section-shell" aria-labelledby="screens-title">
+        <div class="section-heading section-heading--split">
+          <div>
+            <p class="eyebrow">Внутри AnyEat</p>
+            <h2 id="screens-title">Твои цели.<br><em>Твой город.</em></h2>
+          </div>
+          <p>Не нужно выбирать между рестораном и вниманием к себе. Нужная информация в нужный момент.</p>
+        </div>
+        <div class="store-shots" aria-label="Экраны AnyEat">
+          <img src="assets/store/s1.jpg" alt="Легко сканируй продукты" loading="lazy" width="598" height="1300">
+          <img src="assets/store/s2.jpg" alt="Экран AnyEat" loading="lazy" width="598" height="1300">
+          <img src="assets/store/s3.jpg" alt="Экран AnyEat" loading="lazy" width="598" height="1300">
+          <img src="assets/store/s4.jpg" alt="Экран AnyEat" loading="lazy" width="598" height="1300">
+          <img src="assets/store/s5.jpg" alt="Экран AnyEat" loading="lazy" width="598" height="1300">
+          <img src="assets/store/s6.jpg" alt="Экран AnyEat" loading="lazy" width="598" height="1300">
+        </div>
+      </section>
+
+      <section class="faq section-shell" aria-labelledby="faq-title">
+        <div class="section-heading">
+          <p class="eyebrow">Вопрос и ответ</p>
+          <h2 id="faq-title">Что важно знать.</h2>
+        </div>
+        <div class="faq__list">
+          <details open>
+            <summary>Что такое AnyEat?</summary>
+            <p>Будущее мобильное приложение для учёта питания и КБЖУ ресторанов на iOS и Android.</p>
+          </details>
+          <details>
+            <summary>Когда можно будет попробовать?</summary>
+            <p>Оставь email в списке ожидания — мы сообщим о доступности AnyEat.</p>
+          </details>
+          <details>
+            <summary>Что доступно уже сейчас?</summary>
+            <p>Меню ресторанов с КБЖУ и фильтрами уже доступны в RestaurantSecret.</p>
+            <a class="button button--primary faq__cta" href="https://restaurantsecret.ru">Попробовать сейчас <span aria-hidden="true">↗</span></a>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell">
+      <a class="wordmark" href="#top" aria-label="AnyEat, наверх"><img class="wordmark__mark" src="assets/logo-mark.svg" alt="" aria-hidden="true"><img class="wordmark__text" src="assets/wordmark.svg" alt="AnyEat" width="312" height="108"></a>
+      <p>Ешь вкусно, выбирай осознанно.</p>
+      <a href="https://restaurantsecret.ru">RestaurantSecret ↗</a>
+      <p class="site-footer__copy"><span>© 2026 AnyEat</span><a href="https://restaurantsecret.ru/privacy" target="_blank" rel="noopener">Политика конфиденциальности</a></p>
+    </footer>
+    <script>
+      (function () {
+        var ENDPOINT = 'https://pd.restaurantsecret.ru/api/anyeat-waitlist';
+        var form = document.getElementById('waitlist-form');
+        var status = document.getElementById('form-status');
+        if (!form) return;
+        function say(msg, kind) { status.textContent = msg; status.setAttribute('data-kind', kind || ''); }
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          var data = new FormData(form);
+          var email = String(data.get('email') || '').trim();
+          if (data.get('website')) return;
+          if (!/^\S+@\S+\.\S+$/.test(email)) { say('Проверь адрес email', 'error'); return; }
+          if (!data.get('consent')) { say('Поставь галочку согласия, чтобы мы могли написать тебе', 'error'); return; }
+          var button = form.querySelector('button[type="submit"]');
+          button.disabled = true; say('Отправляем…', '');
+          fetch(ENDPOINT, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              email: email,
+              platform: data.get('platform') || 'unknown',
+              personal_data_consent: true,
+              marketing_consent: true,
+              consent_version: 'anyeat-waitlist-2026-10-24',
+              source: 'anyeat.ru'
+            })
+          }).then(function (response) {
+            if (!response.ok) throw new Error('http_' + response.status);
+            form.reset();
+            say('Готово! Мы напишем, когда AnyEat будет готов', 'ok');
+            form.classList.add('is-done');
+          }).catch(function () {
+            say('Не получилось отправить. Попробуй ещё раз чуть позже', 'error');
+          }).then(function () { button.disabled = false; });
+        });
+      })();
+    </script>
   </body>
 </html>

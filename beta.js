@@ -25,21 +25,38 @@
     });
   }
 
-  // --- Кнопки скачивания -------------------------------------------------
+  // --- Кнопки скачивания и раскрытие инструкции для APK -------------------
+  var help = document.getElementById('apk-help');
+  var toggle = document.querySelector('.store-split__toggle');
+  var soon = document.querySelector('[data-apk-soon]');
+
+  function setHelp(open) {
+    if (!help || !toggle) return;
+    help.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) help.removeAttribute('inert'); else help.setAttribute('inert', '');
+  }
+  if (toggle) toggle.addEventListener('click', function () { setHelp(!help.classList.contains('is-open')); });
+
   document.querySelectorAll('[data-store-link]').forEach(function (link) {
-    var url = LINKS[link.getAttribute('data-store-link')];
+    var kind = link.getAttribute('data-store-link');
+    var url = LINKS[kind];
     if (url) {
       link.setAttribute('href', url);
-      if (link.getAttribute('data-store-link') === 'appstore') {
-        link.setAttribute('rel', 'noopener');
-        link.removeAttribute('download');
-      }
+      if (kind === 'appstore') { link.setAttribute('rel', 'noopener'); link.removeAttribute('download'); }
+      // APK: скачивание начинается по ссылке, а инструкция раскрывается рядом.
+      if (kind === 'apk') link.addEventListener('click', function () { setHelp(true); });
       return;
     }
     link.removeAttribute('download');
     link.setAttribute('aria-disabled', 'true');
     link.addEventListener('click', function (event) {
       event.preventDefault();
+      if (kind === 'apk') {
+        setHelp(true);
+        if (soon) soon.hidden = false;
+        return;
+      }
       link.classList.add('is-soon');
       window.setTimeout(function () { link.classList.remove('is-soon'); }, 1800);
     });
@@ -155,14 +172,36 @@
     });
   }
 
+  // --- «Внутри AnyEat»: экраны плавно уезжают вбок при прокрутке страницы ----
+  var viewport = document.getElementById('gallery-viewport');
+  if (viewport && !reduceMotion && finePointer) {
+    var driving = false;
+    var drive = function () {
+      driving = false;
+      var rect = viewport.getBoundingClientRect();
+      var vh = window.innerHeight;
+      var progress = Math.min(1, Math.max(0, (vh - rect.top) / (vh + rect.height)));
+      viewport.scrollLeft = (viewport.scrollWidth - viewport.clientWidth) * progress;
+    };
+    window.addEventListener('scroll', function () {
+      if (!driving) { driving = true; window.requestAnimationFrame(drive); }
+    }, { passive: true });
+    window.addEventListener('resize', drive);
+    drive();
+  }
+
   // Плавное появление блоков при прокрутке.
-  var revealNodes = document.querySelectorAll('.beta-card, .install-card, .feedback__copy, .feedback__form');
+  var revealNodes = document.querySelectorAll('.beta-strip, .tile, .gallery, .loyalty, .feedback__copy, .feedback__form');
   if (!reduceMotion && 'IntersectionObserver' in window) {
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) { entry.target.classList.add('is-in'); observer.unobserve(entry.target); }
       });
-    }, { threshold: .15 });
-    revealNodes.forEach(function (node) { node.classList.add('reveal'); observer.observe(node); });
+    }, { threshold: .12 });
+    revealNodes.forEach(function (node, index) {
+      node.classList.add('reveal');
+      if (node.classList.contains('tile')) node.style.transitionDelay = (index % 3) * 90 + 'ms';
+      observer.observe(node);
+    });
   }
 })();

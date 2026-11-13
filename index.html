@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="AnyEat — приложение, которое помогает выбирать еду в ресторанах осознанно.">
+    <meta name="description" content="AnyEat — приложение, которое помогает выбирать еду в ресторанах осознанно. Сейчас в бете: скачай для iPhone или Android и расскажи, что улучшить.">
     <title>AnyEat — ешь вкусно, выбирай осознанно</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <a class="announce" href="https://restaurantsecret.ru">
+    <a class="announce" href="#install">
       <span class="announce__dot" aria-hidden="true"></span>
-      <span><strong>Можно попробовать бесплатно уже сейчас:</strong> меню ресторанов с КБЖУ в RestaurantSecret</span>
-      <span class="announce__go">Открыть <svg class="arrow" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true" focusable="false"><path d="M3 9 9 3M4.2 3H9v4.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span><strong>AnyEat вышел в бете:</strong> скачай и расскажи, что улучшить</span>
+      <span class="announce__go">Скачать <svg class="arrow" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true" focusable="false"><path d="M3 9 9 3M4.2 3H9v4.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
     </a>
     <header class="site-header">
       <a class="wordmark" href="#top" aria-label="AnyEat, на главную">
@@ -23,7 +23,9 @@
         <img class="wordmark__text" src="assets/wordmark.svg" alt="AnyEat" width="312" height="108">
       </a>
       <nav class="site-nav" aria-label="Основная навигация">
-        <a href="#try-now">Попробуй сейчас</a>
+        <a href="#install">Скачать</a>
+        <a href="#beta">Это бета</a>
+        <a href="#feedback">Обратная связь</a>
         <a href="#how-it-works">Как работает</a>
       </nav>
       <a class="button button--small button--outline" href="https://restaurantsecret.ru">RestaurantSecret <svg class="arrow" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true" focusable="false"><path d="M3 9 9 3M4.2 3H9v4.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -31,27 +33,126 @@
 
     <main id="top">
       <section class="hero section-shell" aria-labelledby="hero-title">
-        <div class="hero__copy">
-          <h1 id="hero-title">Ешь вкусно.<br><span>Выбирай осознанно.</span></h1>
-          <p class="hero__lead">Смотри КБЖУ ресторанных блюд, выбирай без неловкости и оставайся верен своим целям — даже когда жизнь происходит в городе.</p>
-          <div class="hero__actions">
-            <a class="button button--primary" href="https://restaurantsecret.ru">Попробовать сейчас <svg class="arrow" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true" focusable="false"><path d="M3 9 9 3M4.2 3H9v4.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-            <a class="button button--outline" href="#waitlist">В список ожидания</a>
+        <p class="beta-chip"><span class="beta-chip__dot" aria-hidden="true"></span>Бета-версия · ранний доступ</p>
+        <h1 id="hero-title">Ешь вкусно.<br><span>Выбирай осознанно.</span></h1>
+        <p class="hero__lead">Смотри КБЖУ ресторанных блюд, выбирай без неловкости и оставайся верен своим целям — даже когда жизнь происходит в городе.</p>
+        <div class="hero__actions">
+          <a class="store-button store-button--dark" href="#" data-store-link="appstore">
+            <svg class="store-button__icon" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.4 12.7c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.9-.8-3.1-.8-1.6 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.700 2.400 2.900 2.300 1.200 0 1.600-.7 3-.7s1.800.7 3.100.7c1.300 0 2.100-1.100 2.900-2.300.9-1.300 1.300-2.600 1.300-2.700-.1 0-2.600-1-2.600-3.700zM14.100 5.800c.6-.8 1.100-1.900.9-3-1 0-2.100.6-2.800 1.400-.6.700-1.100 1.800-1 2.900 1.100.100 2.200-.5 2.900-1.300z"/></svg>
+            <span><small>Загрузить в</small>App Store</span>
+          </a>
+          <a class="store-button store-button--light" href="#" data-store-link="apk" download>
+            <svg class="store-button__icon" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.900 15.500c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm10.200 0c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zM17.300 9.800l1.700-3c.1-.2 0-.4-.2-.5-.2-.1-.4 0-.5.200l-1.700 3.100c-1.300-.6-2.800-.9-4.400-.9-1.600 0-3.100.3-4.400.9L5.100 6.500c-.1-.2-.3-.3-.5-.2-.2.100-.3.300-.2.500l1.700 3C3.200 11.500 1.300 14.100 1 17.200h22c-.3-3.100-2.200-5.700-5.700-7.400z"/></svg>
+            <span><small>Для Android</small>Скачать APK</span>
+          </a>
+        </div>
+        <p class="hero__meta">Ты среди первых, кто формирует AnyEat</p>
+
+        <div class="stage" id="stage" aria-label="Рука с телефоном: в приложении AnyEat открыто меню ресторана с КБЖУ блюд">
+          <div class="stage__glow" aria-hidden="true"></div>
+          <img class="stage__photo" src="assets/hero-cafe.webp" alt="Девушка держит телефон с AnyEat над столом в кафе" width="1536" height="1024" fetchpriority="high">
+          <div class="float float--dish" data-depth="1.4" aria-hidden="true">
+            <span class="float__icon float__icon--coral"></span>
+            <div><strong>Сибас на гриле</strong><small>370 ккал · Б 64 г</small></div>
+          </div>
+          <div class="float float--scan" data-depth="2" aria-hidden="true">
+            <span class="float__icon float__icon--scan"></span>
+            <div><strong>Штрихкод распознан</strong><small>Продукт добавлен в дневник</small></div>
+          </div>
+          <div class="float float--left" data-depth="1.8" aria-hidden="true">
+            <span class="ring" style="--p: 72"></span>
+            <div><strong>Осталось 640 ккал</strong><small>на сегодня</small></div>
+          </div>
+          <div class="float float--protein" data-depth="1.2" aria-hidden="true">
+            <div class="float__bar"><span style="width: 62%"></span></div>
+            <div><strong>Белок</strong><small>64 из 104 г</small></div>
           </div>
         </div>
+      </section>
 
-        <div class="hero__visual" aria-label="Экраны AnyEat: меню ресторана и дневник питания">
-          <div class="hero__sun" aria-hidden="true"></div>
-          <div class="hero__line hero__line--one" aria-hidden="true"></div>
-          <figure class="device device--menu">
-            <img src="assets/real/menu.jpg" alt="Экран с меню ресторана и КБЖУ блюд" width="1206" height="2622">
-          </figure>
-          <figure class="device device--diary">
-            <img src="assets/real/diary.jpg" alt="Экран дневника питания с калориями и макронутриентами" width="1206" height="2622">
-          </figure>
-          <span class="visual-note visual-note--top">выбор без догадок</span>
-          <span class="visual-note visual-note--bottom">полный обзор на твоё питание</span>
+      <section class="beta section-shell" id="beta" aria-labelledby="beta-title">
+        <div class="section-heading section-heading--split">
+          <div>
+            <p class="eyebrow">Бета-версия</p>
+            <h2 id="beta-title">Это бета.<br><em>И ты в числе первых.</em></h2>
+          </div>
+          <p>Мы запустились и растём вместе с первыми пользователями. Ты получаешь AnyEat раньше всех и влияешь на то, каким он станет.</p>
         </div>
+        <div class="beta__grid">
+          <article class="beta-card">
+            <span class="beta-card__number">01</span>
+            <h3>Ранний доступ</h3>
+            <p>Ты видишь продукт, пока он собирается, и первым пробуешь новое.</p>
+          </article>
+          <article class="beta-card">
+            <span class="beta-card__number">02</span>
+            <h3>Возможны шероховатости</h3>
+            <p>Что-то может работать не идеально. Мы чиним быстро, а ты можешь ускорить это одним сообщением.</p>
+          </article>
+          <article class="beta-card">
+            <span class="beta-card__number">03</span>
+            <h3>Твой голос решает</h3>
+            <p>Каждое сообщение читаем сами и отвечаем. Хорошие идеи попадают в обновления.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="install section-shell" id="install" aria-labelledby="install-title">
+        <div class="section-heading">
+          <p class="eyebrow">Скачать</p>
+          <h2 id="install-title">Выбери свой телефон.</h2>
+        </div>
+        <div class="install__grid">
+          <article class="install-card">
+            <h3>iPhone</h3>
+            <p>Открой AnyEat в App Store и установи как обычное приложение.</p>
+            <a class="store-button store-button--dark" href="#" data-store-link="appstore">
+              <svg class="store-button__icon" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.4 12.7c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.9-.8-3.1-.8-1.6 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.700 2.400 2.900 2.300 1.200 0 1.600-.7 3-.7s1.800.7 3.100.7c1.300 0 2.100-1.100 2.900-2.300.9-1.300 1.300-2.600 1.300-2.700-.1 0-2.600-1-2.600-3.700zM14.100 5.800c.6-.8 1.100-1.900.9-3-1 0-2.100.6-2.800 1.400-.6.700-1.100 1.800-1 2.900 1.100.100 2.200-.5 2.900-1.300z"/></svg>
+              <span><small>Загрузить в</small>App Store</span>
+            </a>
+          </article>
+          <article class="install-card">
+            <h3>Android</h3>
+            <p>В Google Play и RuStore приложения пока нет. Скачай установочный файл (APK) прямо здесь.</p>
+            <a class="store-button store-button--light" href="#" data-store-link="apk" download>
+              <svg class="store-button__icon" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.900 15.500c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm10.200 0c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zM17.300 9.800l1.700-3c.1-.2 0-.4-.2-.5-.2-.1-.4 0-.5.200l-1.700 3.100c-1.300-.6-2.800-.9-4.400-.9-1.600 0-3.100.3-4.400.9L5.100 6.500c-.1-.2-.3-.3-.5-.2-.2.100-.3.300-.2.500l1.700 3C3.200 11.500 1.300 14.100 1 17.200h22c-.3-3.100-2.200-5.700-5.700-7.400z"/></svg>
+              <span><small>Для Android</small>Скачать APK</span>
+            </a>
+            <ol class="steps">
+              <li>Скачай файл и открой его из уведомления или раздела «Загрузки».</li>
+              <li>Если телефон спросит, разреши установку из этого источника: это обычный шаг для приложений вне магазина.</li>
+              <li>Нажми «Установить» и открой AnyEat.</li>
+            </ol>
+            <p class="install-card__note">Скачивай файл только с anyeat.ru. Как только AnyEat появится в Google Play и RuStore, <a href="#waitlist">мы сообщим</a>.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="feedback section-shell" id="feedback" aria-labelledby="feedback-title">
+        <div class="feedback__copy">
+          <p class="eyebrow">Обратная связь</p>
+          <h2 id="feedback-title">Нашёл ошибку?<br><em>Есть идея?</em></h2>
+          <p>Напиши, что не так или чего не хватает. Это занимает минуту, а мы читаем всё сами.</p>
+          <p class="feedback__hint">Чем конкретнее, тем быстрее починим: на каком экране это случилось и что ты ожидал увидеть.</p>
+        </div>
+        <form class="feedback__form" id="feedback-form" novalidate>
+          <fieldset class="segmented">
+            <legend>О чём хочешь рассказать</legend>
+            <div class="segmented__row">
+              <label class="segmented__item"><input type="radio" name="feedback_type" value="problem" checked><span>Ошибка</span></label>
+              <label class="segmented__item"><input type="radio" name="feedback_type" value="suggestion"><span>Идея</span></label>
+              <label class="segmented__item"><input type="radio" name="feedback_type" value="question"><span>Вопрос</span></label>
+            </div>
+          </fieldset>
+          <label class="field-label" for="fb-message">Сообщение</label>
+          <textarea id="fb-message" name="message" rows="5" maxlength="2000" placeholder="Что случилось? На каком экране? Что ты ожидал увидеть?" required></textarea>
+          <label class="field-label" for="fb-email">Email, чтобы ответить <span>(необязательно)</span></label>
+          <input id="fb-email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+          <label class="consent consent--feedback" id="fb-consent-row" hidden><input type="checkbox" name="consent"><span>Даю согласие на <a href="https://restaurantsecret.ru/legal/pdn-consent.pdf" target="_blank" rel="noopener">обработку персональных данных</a> для ответа на моё сообщение.</span></label>
+          <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="button button--solid" type="submit">Отправить</button>
+          <p class="form-status" id="fb-status" role="status" aria-live="polite"></p>
+        </form>
       </section>
 
       <section class="try-now section-shell" id="try-now" aria-labelledby="try-title">
@@ -65,24 +166,16 @@
 
       <section class="waitlist section-shell" id="waitlist" aria-labelledby="waitlist-title">
         <div>
-          <p class="eyebrow">Ранний доступ</p>
-          <h2 id="waitlist-title">Будь в числе первых.</h2>
-          <p>Оставь email — сообщим, когда AnyEat будет готов.</p>
+          <p class="eyebrow">Google Play и RuStore</p>
+          <h2 id="waitlist-title">Скажем, когда выйдем в сторах.</h2>
+          <p>Оставь email — напишем, когда AnyEat появится в Google Play и RuStore.</p>
         </div>
         <form class="waitlist__form" id="waitlist-form" novalidate>
           <label for="email">Email</label>
           <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
-          <fieldset>
-            <legend>Платформа <span>(необязательно)</span></legend>
-            <div class="choice-row">
-              <label class="choice"><input type="radio" name="platform" value="ios"><span>iOS</span></label>
-              <label class="choice"><input type="radio" name="platform" value="android"><span>Android</span></label>
-              <label class="choice"><input type="radio" name="platform" value="unknown"><span>Пока не знаю</span></label>
-            </div>
-          </fieldset>
           <label class="consent"><input type="checkbox" name="consent" required><span>Даю согласие на <a href="https://restaurantsecret.ru/legal/pdn-consent.pdf" target="_blank" rel="noopener">обработку персональных данных</a> в целях отправки рекламных сообщений, в том числе сообщений о запуске AnyEat и других предложениях.</span></label>
           <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <button class="button button--solid" type="submit">Встать в список ожидания</button>
+          <button class="button button--solid" type="submit">Сообщить мне</button>
           <p class="form-note">Обещаем писать только по важным поводам ♡</p>
           <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </form>
@@ -137,11 +230,19 @@
         <div class="faq__list">
           <details open>
             <summary>Что такое AnyEat?</summary>
-            <p>Будущее мобильное приложение для учёта питания и КБЖУ ресторанов на iOS и Android.</p>
+            <p>Мобильное приложение для учёта питания и КБЖУ ресторанов на iOS и Android. Сейчас оно в бета-версии.</p>
           </details>
           <details>
-            <summary>Когда можно будет попробовать?</summary>
-            <p>Оставь email в списке ожидания — мы сообщим о доступности AnyEat.</p>
+            <summary>Что значит «бета»?</summary>
+            <p>Приложение уже работает, но мы ещё дорабатываем его вместе с первыми пользователями. Что-то может работать не идеально, и твои сообщения помогают нам исправлять это быстрее.</p>
+          </details>
+          <details>
+            <summary>Как сообщить об ошибке или предложить идею?</summary>
+            <p>Заполни <a href="#feedback">короткую форму</a> на этой странице. Мы читаем каждое сообщение.</p>
+          </details>
+          <details>
+            <summary>Безопасно ли ставить APK на Android?</summary>
+            <p>Скачивай файл только с anyeat.ru. Телефон попросит разрешить установку из браузера или файлового менеджера: это стандартный шаг для приложений вне магазина.</p>
           </details>
           <details>
             <summary>Что доступно уже сейчас?</summary>
@@ -158,43 +259,6 @@
       <a href="https://restaurantsecret.ru">RestaurantSecret <svg class="arrow" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true" focusable="false"><path d="M3 9 9 3M4.2 3H9v4.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       <p class="site-footer__copy"><span>© 2026 AnyEat</span><a href="https://restaurantsecret.ru/privacy" target="_blank" rel="noopener">Политика конфиденциальности</a></p>
     </footer>
-    <script>
-      (function () {
-        var ENDPOINT = 'https://pd.restaurantsecret.ru/api/anyeat-waitlist';
-        var form = document.getElementById('waitlist-form');
-        var status = document.getElementById('form-status');
-        if (!form) return;
-        function say(msg, kind) { status.textContent = msg; status.setAttribute('data-kind', kind || ''); }
-        form.addEventListener('submit', function (event) {
-          event.preventDefault();
-          var data = new FormData(form);
-          var email = String(data.get('email') || '').trim();
-          if (data.get('website')) return;
-          if (!/^\S+@\S+\.\S+$/.test(email)) { say('Проверь адрес email', 'error'); return; }
-          if (!data.get('consent')) { say('Поставь галочку согласия, чтобы мы могли написать тебе', 'error'); return; }
-          var button = form.querySelector('button[type="submit"]');
-          button.disabled = true; say('Отправляем…', '');
-          fetch(ENDPOINT, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              email: email,
-              platform: data.get('platform') || 'unknown',
-              personal_data_consent: true,
-              marketing_consent: true,
-              consent_version: 'anyeat-waitlist-2026-10-24',
-              source: 'anyeat.ru'
-            })
-          }).then(function (response) {
-            if (!response.ok) throw new Error('http_' + response.status);
-            form.reset();
-            say('Готово! Мы напишем, когда AnyEat будет готов', 'ok');
-            form.classList.add('is-done');
-          }).catch(function () {
-            say('Не получилось отправить. Попробуй ещё раз чуть позже', 'error');
-          }).then(function () { button.disabled = false; });
-        });
-      })();
-    </script>
+    <script src="beta.js" defer></script>
   </body>
 </html>

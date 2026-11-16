@@ -468,6 +468,10 @@ fieldset legend span, .waitlist__form small { color: var(--ink); font-weight: 40
 .float--scan { right: 2%; top: 15%; animation-delay: -2.2s; }
 .float--left { left: 7%; bottom: 26%; animation-delay: -4.1s; }
 .float--protein { right: 5%; bottom: 22%; animation-delay: -1.3s; min-width: 190px; }
+.float--goal { left: 0; top: 41%; animation-delay: -5s; }
+.float__days { display: flex; gap: 4px; margin-top: 7px; }
+.float__days i { width: 9px; height: 9px; border-radius: 50%; background: linear-gradient(135deg, var(--coral), var(--orange)); }
+.float__days i:last-child { background: transparent; box-shadow: inset 0 0 0 1.5px rgb(var(--coral-rgb) / .5); }
 @keyframes float-y { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
 .float__icon { flex: none; width: 36px; height: 36px; border-radius: 12px; }
@@ -536,7 +540,7 @@ fieldset legend span, .waitlist__form small { color: var(--ink); font-weight: 40
   .store-button { justify-content: center; }
   .store-split .store-button { flex: 1; }
   .hero__actions { width: 100%; }
-  .float--scan, .float--protein { display: none; }
+  .float--scan, .float--protein, .float--goal { display: none; }
   .float--dish { left: 3%; top: 2%; }
   .float--left { left: auto; right: 2%; bottom: 10%; }
 }

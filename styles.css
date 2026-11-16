@@ -440,8 +440,8 @@ fieldset legend span, .waitlist__form small { color: var(--ink); font-weight: 40
 .hero__actions { justify-content: center; margin-bottom: 14px; }
 .hero__meta { margin: 0; color: var(--muted); font-size: 13px; }
 
-.beta-chip { display: inline-flex; align-items: center; gap: 9px; margin: 0 0 24px; padding: 8px 16px; border: 1px solid rgb(var(--coral-rgb) / .35); border-radius: 99px; background: var(--cream-tint); color: var(--coral-dark); font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
-.beta-chip__dot { width: 8px; height: 8px; border-radius: 50%; background: var(--coral); box-shadow: 0 0 0 0 rgb(var(--coral-rgb) / .5); animation: chip-pulse 2.4s ease-out infinite; }
+.beta-chip { display: inline-flex; align-items: center; gap: 9px; margin: 0 0 24px; padding: 8px 16px; border: 1px solid rgb(255 255 255 / .12); border-radius: 99px; background: var(--ink); color: var(--cream); box-shadow: 0 8px 20px rgb(var(--ink-rgb) / .2); font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.beta-chip__dot { width: 8px; height: 8px; border-radius: 50%; background: var(--coral-light); box-shadow: 0 0 0 0 rgb(var(--coral-rgb) / .5); animation: chip-pulse 2.4s ease-out infinite; }
 @keyframes chip-pulse { 0% { box-shadow: 0 0 0 0 rgb(var(--coral-rgb) / .5); } 70%, 100% { box-shadow: 0 0 0 9px rgb(var(--coral-rgb) / 0); } }
 
 /* Store buttons */

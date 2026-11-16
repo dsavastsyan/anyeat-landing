@@ -616,7 +616,11 @@ fieldset legend span, .waitlist__form small { color: var(--ink); font-weight: 40
 .float--tile .float__icon, .float--tile .ring { width: 30px; height: 30px; border-radius: 10px; }
 .float--tile .ring { border-radius: 50%; }
 .float--t-home { right: 4%; top: 350px; animation-delay: -1.2s; }
-.float--t-rest { left: 4%; top: 372px; animation-delay: -3s; }
+.float--t-rest { left: 2%; top: 268px; animation-delay: -3s; }
+.float--t-prot { right: 2%; top: 324px; animation-delay: -4.2s; }
+.float--t-fat { left: 10%; top: 392px; animation-delay: -1.8s; }
+.float__icon--prot { background: linear-gradient(135deg, #43B07A, #2F8F5F); }
+.float__icon--fat { background: linear-gradient(135deg, #E7A94B, #C98A2E); }
 .float--t-diary { right: 4%; top: 352px; animation-delay: -2.1s; }
 
 /* ---- "Внутри AnyEat": dark panel, screens drift sideways while scrolling ---- */
@@ -659,7 +663,9 @@ fieldset legend span, .waitlist__form small { color: var(--ink); font-weight: 40
   .tile { min-height: 420px; padding: 24px 24px 0; }
   .phone-crop { top: 218px; }
   .float--t-home { top: 334px; }
-  .float--t-rest { top: 356px; }
+  .float--t-rest { left: 2%; top: 262px; }
+  .float--t-prot { right: 2%; top: 300px; }
+  .float--t-fat { left: 6%; top: 352px; }
   .float--t-diary { top: 336px; }
   .tile h3 { font-size: 25px; }
   .gallery__head { display: block; padding-top: 34px; }

@@ -469,9 +469,8 @@ fieldset legend span, .waitlist__form small { color: var(--ink); font-weight: 40
 .float--left { left: 7%; bottom: 26%; animation-delay: -4.1s; }
 .float--protein { right: 5%; bottom: 22%; animation-delay: -1.3s; min-width: 190px; }
 .float--goal { left: 0; top: 41%; animation-delay: -5s; }
-.float__days { display: flex; gap: 4px; margin-top: 7px; }
-.float__days i { width: 9px; height: 9px; border-radius: 50%; background: linear-gradient(135deg, var(--coral), var(--orange)); }
-.float__days i:last-child { background: transparent; box-shadow: inset 0 0 0 1.5px rgb(var(--coral-rgb) / .5); }
+.float__track { display: block; width: 100%; min-width: 130px; height: 6px; margin-top: 8px; overflow: hidden; border-radius: 99px; background: var(--coral-tint); }
+.float__track i { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--coral), var(--orange)); }
 @keyframes float-y { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
 .float__icon { flex: none; width: 36px; height: 36px; border-radius: 12px; }

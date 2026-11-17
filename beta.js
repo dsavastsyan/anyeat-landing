@@ -2,8 +2,8 @@
   'use strict';
 
   // Ссылки на скачивание. Пустая ссылка: кнопка показывает подсказку «скоро».
-  // appstore: страница AnyEat в App Store (пока пусто); apk: файл в /downloads/ (версия 0.1.0).
-  var LINKS = { appstore: '', apk: '/downloads/AnyEat-0.1.0.apk' };
+  // appstore: страница AnyEat в App Store; apk: файл в /downloads/ (версия 0.1.0).
+  var LINKS = { appstore: 'https://apps.apple.com/ru/app/id6799767816', apk: '/downloads/AnyEat-0.1.0.apk' };
 
   var API = 'https://pd.restaurantsecret.ru/api';
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
